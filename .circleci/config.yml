@@ -18,3 +18,4 @@ workflows:
   my-workflow:
     jobs:
       - hello-job
+      - bye-job
