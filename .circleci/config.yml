@@ -12,7 +12,12 @@ jobs:
       - image: cimg/node:19.4.0
     steps:
       - checkout
-      - run: ls -lh
+      - run:
+          name: Listing Files
+          command: |
+            ls -lh
+            npm install
+            ls -lh
 
 workflows:
   my-workflow:
