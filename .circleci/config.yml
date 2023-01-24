@@ -6,18 +6,19 @@ jobs:
       - image: cimg/node:19.4.0
     steps:
       - checkout
-      - run: node --version
-  bye-job:
-    docker:
-      - image: cimg/node:19.4.0
-    steps:
-      - checkout
       - run:
           name: Listing Files
           command: |
             ls -lh
             npm install
             ls -lh
+  bye-job:
+    docker:
+      - image: cimg/node:19.4.0
+    steps:
+      - checkout
+      - run: ls -lh
+
 
 workflows:
   my-workflow:
